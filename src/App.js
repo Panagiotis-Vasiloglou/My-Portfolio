@@ -28,7 +28,7 @@ function App() {
     <div className={nightIcon ? "App" : "light-App"}>
       <AnimatePresence exitBeforeEnter>
         <Switch location={location} key={location.pathname}>
-          <Route path="/" exact>
+          <Route path="/My-Portfolio/" exact>
             <Navbar nightIcon={nightIcon} setNightIcon={setNightIcon} openMenu={openMenu} setOpenMenu={setOpenMenu}/>
             <Hero nightIcon={nightIcon} />
             <SecretMenu nightIcon={nightIcon} setNightIcon={setNightIcon} openMenu={openMenu} setOpenMenu={setOpenMenu}/>
