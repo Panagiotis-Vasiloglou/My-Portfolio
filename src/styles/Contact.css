@@ -1,0 +1,158 @@
+.contact {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(236, 236, 236);
+}
+
+.contact-text {
+    margin-left: 1rem;
+}
+
+.contact-text h1 {
+    padding: 0;
+    /* margin-bottom: 20px; */
+    line-height: 1;
+    font-weight: 700;
+    font-size: 3.5rem;
+    background-image: linear-gradient(to right, rgb(199, 132, 8), red);
+    background-clip: text;
+    color: transparent;
+}
+
+form {
+    margin: 0 2rem;
+}
+
+form div {
+    margin: 1rem 0;
+}
+
+form label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+form input {
+    width: 100%;
+    background-color: rgb(49, 43, 65);
+    color: #fff;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+form input:hover {
+    background-color: rgb(66, 59, 85);
+}
+
+form textarea {
+    width: 100%;
+    background-color: rgb(49, 43, 65);
+    color: #fff;
+    resize: none;
+    border: none;
+    border-bottom: 1px solid white;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+form textarea:hover {
+    background-color: rgb(66, 59, 85);
+}
+
+form small {
+    display: block;
+    visibility: visible;
+}
+
+.btn {
+    width: 100%;
+}
+
+.btn button {
+    width: 100%;
+    color: rgb(231, 122, 103);
+    padding: 0.6rem;
+    background-color: transparent;
+    border: 1px solid rgb(221, 93, 70);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.btn button:hover {
+    background-color: rgba(231, 122, 103, 0.253);
+}
+
+.light-contact {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(43, 43, 43);
+}
+
+.light-contact .contact-text h1 {
+    background-image: linear-gradient(to right, #7600ff, #4d00ff);
+    background-clip: text;
+    color: transparent;
+}
+
+.light-contact form input {
+    width: 100%;
+    background-color: rgb(226, 226, 226);
+    color: rgb(41, 41, 41);
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.light-contact form input:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+.light-contact form textarea {
+    background-color: rgb(226, 226, 226);
+    color: rgb(41, 41, 41);
+
+    border-bottom: 1px solid black;
+}
+
+.light-contact form textarea:hover {
+    background-color: rgb(218, 218, 218);
+}
+
+.light-contact .btn button {
+    color: rebeccapurple;
+    border: 1px solid rebeccapurple;
+}
+
+.light-contact .btn button:hover {
+    background-color: rgba(153, 76, 216, 0.253);
+}
+
+@media (max-width: 880px) {
+    .contact {
+        margin-top: 3rem;
+        flex-direction: column;
+    }
+
+    .light-contact {
+        margin-top: 3rem;
+        flex-direction: column;
+    }
+}
+@media (max-width: 520px) {
+    .form {
+        padding: 0;
+        width: 90%;
+    }
+    .contact-form {
+        width: 100%;
+    }
+}

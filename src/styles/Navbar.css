@@ -1,0 +1,202 @@
+.nav {
+    width: 100%;
+    min-height: 5vh;
+    background-color: #191620;
+    box-shadow: 0 0.5px 20px rgba(201, 201, 201, 0.199);
+}
+
+.nav-ul {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style-type: none;
+    color: rgb(239, 239, 240);
+}
+
+.nav-li {
+    padding: 0 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.nav-li a:hover {
+    background-image: linear-gradient(to right, orange, red);
+    background-clip: text;
+    color: transparent;
+}
+
+.nav a {
+    text-decoration: none;
+    color: rgb(239, 239, 240);
+}
+
+.logo {
+    flex: 1;
+}
+
+.logo img {
+    cursor: pointer;
+    width: 200px;
+}
+
+.sun {
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.night {
+    cursor: pointer;
+    color: #000;
+    font-size: 1.3rem;
+}
+
+.sun:hover {
+    color: tomato;
+}
+
+.night:hover {
+    color: rgb(112, 20, 155);
+}
+
+.menu-btn {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #fff;
+    border-radius: 7px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+    display: none;
+    z-index: 1;
+}
+
+.menu-btn:hover {
+    border: 1px solid tomato;
+}
+
+.menu-btn:hover .burger {
+    background-color: tomato;
+}
+.menu-btn:hover .burger::before {
+    background-color: tomato;
+}
+.menu-btn:hover .burger::after {
+    background-color: tomato;
+}
+
+.burger {
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.burger::before,
+.burger::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    border-radius: 10px;
+    transition: all 0.5s ease;
+}
+
+.burger::before {
+    transform: translateY(-10px);
+}
+
+.burger::after {
+    transform: translateY(10px);
+}
+
+/* animation burger menu */
+
+.menu-btn.open .burger {
+    transform: translateX(-15px);
+    background: transparent;
+}
+
+.menu-btn.open .burger::before {
+    transform: rotate(45deg) translate(10px, -10px);
+}
+
+.menu-btn.open .burger::after {
+    transform: rotate(-45deg) translate(10px, 10px);
+}
+
+/* LIGHT MODE */
+
+.nav-light {
+    background-color: #fff;
+    color: #000;
+}
+
+.nav-light a {
+    color: rgb(36, 36, 36);
+    text-decoration: none;
+}
+.nav-light a:hover {
+    background-image: linear-gradient(to right, #7600ff, #4d00ff);
+    background-clip: text;
+    color: transparent;
+}
+
+.nav-light .menu-btn,
+.nav-light .menu-btn.open {
+    border: 1px solid black;
+}
+
+.nav-light .menu-btn:hover,
+.nav-light .menu-btn.open:hover {
+    border: 1px solid rgb(110, 15, 235);
+}
+
+.nav-light .menu-btn:hover .burger {
+    background-color: rebeccapurple;
+}
+.nav-light .menu-btn:hover .burger::before {
+    background-color: rebeccapurple;
+}
+.nav-light .menu-btn:hover .burger::after {
+    background-color: rebeccapurple;
+}
+
+.nav-light .burger::before,
+.nav-light .burger::after {
+    background-color: rebeccapurple;
+}
+
+.nav-light .burger {
+    background-color: rebeccapurple;
+}
+.nav-light .menu-btn.open .burger {
+    transform: translateX(-15px);
+    background: transparent;
+}
+
+@media (max-width: 760px) {
+    .nav-li {
+        display: none;
+    }
+    .menu-btn {
+        display: flex;
+        margin-left: 1rem;
+    }
+
+    .nav-ul {
+        width: 95%;
+    }
+}
+@media (max-width: 360px) {
+    .logo img {
+        width: 150px;
+    }
+}
