@@ -16,14 +16,15 @@ export default function Contact( {nightIcon}) {
 
     const onSubmit = (values, e) => {
         e.preventDefault();
-
-    emailjs.sendForm('service_yynadzv', 'template_d37unee', e.target, 'user_3z29t3BfL1L4Fh6Nhdhi0')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-      e.target.reset();
+        
+        emailjs.sendForm('service_yynadzv', 'template_d37unee', e.target, 'user_3z29t3BfL1L4Fh6Nhdhi0')
+        .then((result) => {
+            console.log(result.text);
+        }, (error) => {
+            console.log(error.text);
+        });
+        e.target.reset();
+        alert("Your email has been sent!")
     }
 
 

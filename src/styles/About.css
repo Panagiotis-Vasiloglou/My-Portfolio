@@ -157,3 +157,8 @@
         font-size: 1.5rem;
     }
 }
+@media (max-width: 1235px) {
+    .light-about {
+        flex-direction: column;
+    }
+}
